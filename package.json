@@ -1,8 +1,8 @@
 {
   "name": "ecommerce-coderhouse",
   "version": "0.1.0",
-  "homepage": "http://aldanacortez.github.io/PreEntrega1-Cortez",
-  "private": true,
+  "homepage": "http://aldanacortez.github.io/preentrega1-cortez",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
