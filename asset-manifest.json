@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/%7BPreEntrega1-Cortez%7D/static/css/main.2d17b670.css",
+    "main.js": "/%7BPreEntrega1-Cortez%7D/static/js/main.61155b5f.js",
+    "index.html": "/%7BPreEntrega1-Cortez%7D/index.html",
+    "main.2d17b670.css.map": "/%7BPreEntrega1-Cortez%7D/static/css/main.2d17b670.css.map",
+    "main.61155b5f.js.map": "/%7BPreEntrega1-Cortez%7D/static/js/main.61155b5f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d17b670.css",
+    "static/js/main.61155b5f.js"
+  ]
+}
