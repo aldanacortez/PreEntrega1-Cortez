@@ -6,3 +6,8 @@ span {
   padding-left: 0.5rem;
   color: white;
 }
+
+.itemCount span {
+  color: black;
+  padding: 1rem;
+}

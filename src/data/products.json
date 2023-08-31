@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Guitarra",
+        "id": "1",
+        "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Snare_drum_-_Vladimir_Morozov.jpg/1280px-Snare_drum_-_Vladimir_Morozov.jpg",
+        "stock": 3 ,
+        "price": 200,
+        "category": "Cuerdas"
+    },
+    {
+        "title": "Bajo",
+        "id": "2",
+        "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Snare_drum_-_Vladimir_Morozov.jpg/1280px-Snare_drum_-_Vladimir_Morozov.jpg",
+        "stock": 5 ,
+        "price": 500,
+        "category": "Cuerdas"
+    },
+    {
+        "title": "Violin",
+        "id": "3",
+        "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Snare_drum_-_Vladimir_Morozov.jpg/1280px-Snare_drum_-_Vladimir_Morozov.jpg",
+        "stock": 5 ,
+        "price": 800,
+        "category": "Cuerdas"
+    },
+    {
+        "title": "Organo",
+        "id": "4",
+        "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Snare_drum_-_Vladimir_Morozov.jpg/1280px-Snare_drum_-_Vladimir_Morozov.jpg",
+        "stock": 8 ,
+        "price": 900,
+        "category": "Viento"
+    },
+    {
+        "title": "Acordeón",
+        "id": "5",
+        "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Snare_drum_-_Vladimir_Morozov.jpg/1280px-Snare_drum_-_Vladimir_Morozov.jpg",
+        "stock": 6 ,
+        "price": 800,
+        "category": "Viento"
+    },
+    {
+        "title": "Arpa",
+        "id": "6",
+        "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Snare_drum_-_Vladimir_Morozov.jpg/1280px-Snare_drum_-_Vladimir_Morozov.jpg",
+        "stock": 2 ,
+        "price": 990,
+        "category": "Viento"
+    },
+    {
+        "title": "Bateria",
+        "id": "7",
+        "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Snare_drum_-_Vladimir_Morozov.jpg/1280px-Snare_drum_-_Vladimir_Morozov.jpg",
+        "stock": 2 ,
+        "price": 990,
+        "category": "Percusion"
+    },
+    {
+        "title": "Tambor",
+        "id": "8",
+        "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Snare_drum_-_Vladimir_Morozov.jpg/1280px-Snare_drum_-_Vladimir_Morozov.jpg",
+        "stock": 5 ,
+        "price": 500,
+        "category": "Percusion"
+    },
+    {
+        "title": "Pandereta",
+        "id": "9",
+        "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Snare_drum_-_Vladimir_Morozov.jpg/1280px-Snare_drum_-_Vladimir_Morozov.jpg",
+        "stock": 8 ,
+        "price": 600,
+        "category": "Percusion"
+    }
+]
