@@ -16,11 +16,11 @@ export const ItemDetailContainer = (props) => {
         setTimeout(() => {
             const productById = data.find((product) => product.id === id);
             resolve(productById); },
-             2000);
+                2000);
     });
 
     promise.then(data => setProduct(data));
-    }, []);
+    }, []); check
 
     if (!product) return <div>Loading...</div>;
 

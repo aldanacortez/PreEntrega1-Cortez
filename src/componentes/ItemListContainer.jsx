@@ -26,7 +26,7 @@ export const ItemListContainer = (props) => {
             setProducts(productsFiltered);
         }
     }); 
-}, []);
+}, [id]);
 
     console.log(products);
 
