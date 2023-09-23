@@ -20,7 +20,7 @@ export const ItemDetailContainer = (props) => {
     });
 
     promise.then(data => setProduct(data));
-    }, []); check
+    }, [id]);
 
     if (!product) return <div>Loading...</div>;
 
