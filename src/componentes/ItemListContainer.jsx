@@ -32,7 +32,7 @@ export const ItemListContainer = (props) => {
 
     return (
     <Container className="">
-        <h1>{props.greeting}</h1>
+        <h1 className='mt-4'>{props.greeting}</h1>
         <div style={{display:"flex", flexWrap:"wrap"}}> <ItemList products={ products } />
         </div>
         </Container>

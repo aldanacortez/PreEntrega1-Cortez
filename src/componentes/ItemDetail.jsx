@@ -7,11 +7,11 @@ export const ItemDetail = ({ product }) => {
         const onAdd = count => addItem(product, count)
 
 return (
-<div className="col-2 h-100 border justify-content-center">
-        <h1 className="mx-2">{product.title}</h1>
-        <img class="mx-2" style={{height:"150px", width:"150px"}} src={product.pictureUrl} alt=""/>
-        <div className="mx-2">{product.stock}</div>
-        < ItemCount stock={product.stock} onAdd={onAdd}/>
+<div className="col-lg-3 col-12 m-4 h-100 border justify-content-center">
+        <h3 className="mx-2 text-center">{product.title}</h3>
+        <img className="mx-2" style={{height:"150px"}} src={product.pictureUrl} alt=""/>
+        <div className="mx-2 mb-1 text-center display-6">${product.price}</div>
+        < ItemCount stock={product.stock} onAdd={onAdd} className="mb-4"/>
         </div>
 )
 }
