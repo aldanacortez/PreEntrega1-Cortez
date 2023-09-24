@@ -1,9 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
+import {  
+    getDocs, 
+    collection,
+    query,
+    where
+    } from 'firebase/firestore';
 
-import data from '../data/products.json';
+// import data from '../data/products.json';
 import { ItemList } from './ItemList';
+import { db } from '../index'
 
 
 export const ItemListContainer = (props) => {
@@ -11,25 +18,23 @@ export const ItemListContainer = (props) => {
 
     const { id } = useParams();
 
+    console.log(id)
+
     useEffect(() => {
-        const promise = new Promise((resolve,rejetc) => {
-        setTimeout(() => resolve(data), 2000);
-    });
 
-    promise.then((data) => { 
-        if(!id) {
-        setProducts(data);
-        } else {
-            const productsFiltered = data.filter(
-                (product) => product.category === id
-                );
-            setProducts(productsFiltered);
-        }
-    }); 
-}, [id]);
+        const productosRef = collection(db, "productos");
+        
+        getDocs(productosRef)
+        .then((resp) => {
 
-    console.log(products);
-
+            setProducts(
+                resp.docs.map((doc) => {
+                    return {...doc.data(),id: doc.id }
+                })
+            )
+        })
+    }, [id])  
+    
     return (
     <Container className="">
         <h1 className='mt-4'>{props.greeting}</h1>
