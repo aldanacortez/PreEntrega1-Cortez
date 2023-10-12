@@ -1,45 +1,52 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
-import {  
-    getDocs, 
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+
+    import { ItemList } from "./ItemList";
+    import {
     collection,
+    getDocs,
+    getFirestore,
     query,
-    where
-    } from 'firebase/firestore';
+    where,
+    } from "firebase/firestore";
 
-// import data from '../data/products.json';
-import { ItemList } from './ItemList';
-import { db } from '../index'
-
-
-export const ItemListContainer = (props) => {
+    export const ItemListContainer = (props) => {
     const [products, setProducts] = useState([]);
+    // const [loading] = useState(true);
 
     const { id } = useParams();
 
-    console.log(id)
+    console.log(id);
 
     useEffect(() => {
+        const db = getFirestore();
 
-        const productosRef = collection(db, "productos");
-        
-        getDocs(productosRef)
-        .then((resp) => {
+        const refCollection = id
+        ? query(collection(db, "productos"), where("category", "==", id))
+        : collection(db, "productos");
 
+        getDocs(refCollection).then(snapshot => {
+        if (snapshot.size === 0) setProducts([]);
+        else {
             setProducts(
-                resp.docs.map((doc) => {
-                    return {...doc.data(),id: doc.id }
-                })
+            snapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data(),
+            }))
             )
+        }
         })
-    }, [id])  
-    
+    }, [id]);
+
+    //   if (loading) return <div>Loading...</div>;
+
     return (
-    <Container className="">
-        <h1 className='mt-4'>{props.greeting}</h1>
-        <div style={{display:"flex", flexWrap:"wrap"}}> <ItemList products={ products } />
+        <Container>
+        <h1>{props.greeting}</h1>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+            <ItemList products={products} />
         </div>
         </Container>
     );
-};
+    };
