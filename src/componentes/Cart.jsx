@@ -6,11 +6,6 @@ import { collection, getFirestore, addDoc } from "firebase/firestore";
 // import { useState } from "react";
 
 export const Cart = () => {
-    const [ formValues, setFormValues] = useState({
-        name: "",
-        phone: "",
-        email: "",
-    })
 
     const { items, removeItem } = useContext(CartContext);
     const [ name, setName ] = useState('');
@@ -42,7 +37,7 @@ export const Cart = () => {
 
     const sendOrder = () => {
         const order = {
-            buyer: formValues,
+            buyer: {name, email, phone},
             items,
             total: total(),
         }
@@ -51,15 +46,7 @@ export const Cart = () => {
         const orderCollection = collection(db, "orders")
 
         addDoc(orderCollection, order).then(({id}) => {
-            if (id) {
-                setFormValues({
-                    name: "",
-                    phone: "",
-                    email: "",
-                })
-                // clear()
-                alert("sr/a " + name + " su orden con ID: " + id + " ha sido completada")
-            }
+            alert("sr/a " + name + " su compra con ID: " + id + "ha sido exitosa")
         })
     }
 
